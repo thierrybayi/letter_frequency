@@ -6,6 +6,7 @@ void main() {
   TextAreaElement lettersArea = document.query('#letters');
   ButtonElement lettersButton = document.query('#frequency');
   ButtonElement clearButton = document.query('#clear');
+
   lettersButton.onClick.listen((MouseEvent e) {
     lettersArea.value = 'letters: frequency \n';
     var text = textArea.value;
@@ -28,19 +29,19 @@ void main() {
               lettersArea.value = '${lettersArea.value} \n${letter}: ${cmpt}';
               break;
           } else {
-              cmpt = cmpt +1; 
+              cmpt = cmpt +1;
               lastPosition = newPosition;
             }
-          } 
+          }
         }
       }
     } else {
       lettersArea.value = 'Entrez du texte dans le cadran supérieur!';
     }
-   });
+  });
+
   clearButton.onClick.listen((MouseEvent e) {
     textArea.value = '';
     lettersArea.value = '';
-    
-  }); 
+  });
 }

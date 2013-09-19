@@ -1,0 +1,11 @@
+ex02
+
+bien
+
+utiliser .gitignore
+
+README.md: voir Forum
+
+git rm packages
+git commit -m 'msg'
+git push
